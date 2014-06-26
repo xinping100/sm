@@ -1,0 +1,203 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.6	//
+CXX	makefile	/^CXX = g++$/;"	m
+CXXFLAGS	makefile	/^CXXFLAGS = -c -std=c++11 -Wall -g -ggdb -O0 -pthread$/;"	m
+DEF	makefile	/^DEF =$/;"	m
+KEY_BEGIN	dataset.h	/^	KEY_BEGIN = 1,$/;"	e	enum:__anon2
+KEY_END	dataset.h	/^	KEY_END,$/;"	e	enum:__anon2
+KEY_GAME_PLAYER	dataset.h	/^	KEY_GAME_PLAYER = KEY_BEGIN,$/;"	e	enum:__anon2
+LD	makefile	/^LD = g++$/;"	m
+LDFLAGS	makefile	/^LDFLAGS = -pthread$/;"	m
+OBJ_FILES	makefile	/^OBJ_FILES = sharememory.o sharememorymessagequeue.o sharememorylogic.o sharememoryenvironment.o$/;"	m
+SM_KEY	sharememorykey.h	/^enum SM_KEY$/;"	g
+SM_KEY_BEGIN	sharememorykey.h	/^	SM_KEY_BEGIN = 1,$/;"	e	enum:SM_KEY
+SM_KEY_END	sharememorykey.h	/^	SM_KEY_END,$/;"	e	enum:SM_KEY
+SM_KEY_MESSAGE_Q	sharememorykey.h	/^	SM_KEY_MESSAGE_Q = SM_KEY_BEGIN,$/;"	e	enum:SM_KEY
+SM_KEY_NUM	sharememorykey.h	/^	SM_KEY_NUM = SM_KEY_END - SM_KEY_BEGIN,$/;"	e	enum:SM_KEY
+SM_KEY_PLAYER	sharememorykey.h	/^	SM_KEY_PLAYER,$/;"	e	enum:SM_KEY
+_capacity	sharememoryobjectpool.h	/^	unsigned int _capacity;$/;"	m	class:share_memory_object_pool
+_data	dataelement.h	/^	T _data;$/;"	m	class:data_buildin
+_data	dataelement.h	/^	byte_t _data[N];$/;"	m	class:data_bytes
+_data_set	datamapping.h	/^	data_set<KEY> _data_set;$/;"	m	class:data_mapping
+_data_sm	datamapping.h	/^	void* _data_sm;$/;"	m	class:data_mapping
+_db	client.cpp	/^	smo_player _db;$/;"	m	class:game_player	file:
+_ds	sharememorymessagequeue.h	/^	message_queue_data_struct *_ds;$/;"	m	class:share_memory_message_queue
+_elements	dataset.h	/^	std::vector<data_element*> _elements;$/;"	m	class:data_set
+_elements	fifo.h	/^	T *_elements;$/;"	m	class:fifo
+_freelist	sharememoryobjectpool.h	/^	fifo<void*> *_freelist;$/;"	m	class:share_memory_object_pool
+_id	sharememory.h	/^	int _id;$/;"	m	class:share_memory
+_in	fifo.h	/^	unsigned int _in, _out;$/;"	m	class:fifo
+_key	sharememory.h	/^	key_t _key;$/;"	m	class:share_memory
+_loop	sharememoryserver.h	/^	bool _loop;$/;"	m	class:share_memory_server
+_memory	sharememory.h	/^	void* _memory;$/;"	m	class:share_memory
+_msgqueue	sharememoryclient.h	/^	share_memory_message_queue _msgqueue;$/;"	m	class:share_memory_client
+_msgqueue	sharememoryserver.h	/^	share_memory_message_queue _msgqueue;$/;"	m	class:share_memory_server
+_mutex	sharememorymutex.h	/^	pthread_mutex_t _mutex;$/;"	m	class:share_memory_mutex
+_objectset	sharememoryobjectmanager.h	/^	std::set<T*> _objectset;$/;"	m	class:share_memory_object_manager
+_out	fifo.h	/^	unsigned int _in, _out;$/;"	m	class:fifo
+_playermanager	sharememoryclient.h	/^	share_memory_object_manager<smo_player> _playermanager;$/;"	m	class:share_memory_client
+_playermanager	sharememoryserver.h	/^	share_memory_object_manager<smo_player> _playermanager;$/;"	m	class:share_memory_server
+_pool	sharememoryobjectmanager.h	/^	share_memory_object_pool<T> *_pool;$/;"	m	class:share_memory_object_manager
+_size	fifo.h	/^	unsigned int _size, _size_max;$/;"	m	class:fifo
+_size	sharememory.h	/^	size_t _size;$/;"	m	class:share_memory
+_size_max	fifo.h	/^	unsigned int _size, _size_max;$/;"	m	class:fifo
+_sm	sharememorymessagequeue.h	/^	share_memory _sm;$/;"	m	class:share_memory_message_queue
+_sm	sharememoryobjectpool.h	/^	share_memory _sm;$/;"	m	class:share_memory_object_pool
+_smo	client.cpp	/^	smo_player* _smo;$/;"	m	class:game_player	file:
+add	sharememoryobjectmanager.h	/^	bool add(T* t)$/;"	f	class:share_memory_object_manager
+add	sharememoryobjectmanager.h	/^	bool add(unsigned int pool_id)$/;"	f	class:share_memory_object_manager
+add_message	sharememorymessagequeue.cpp	/^bool share_memory_message_queue::add_message(const message& msg)$/;"	f	class:share_memory_message_queue
+byte_t	dataelement.h	/^	typedef unsigned char byte_t;$/;"	t	class:data_bytes
+clear	fifo.h	/^void fifo<T>::clear()$/;"	f	class:fifo
+client	client.cpp	/^share_memory_client client;$/;"	v
+console	client.cpp	/^void console()$/;"	f
+console	server.cpp	/^void console()$/;"	f
+data	dataelement.h	/^	void* data() { return &_data; }$/;"	f	class:data_buildin
+data	dataelement.h	/^	void* data() { return _data; }$/;"	f	class:data_bytes
+data_buildin	dataelement.h	/^class data_buildin : public data_element$/;"	c
+data_bytes	dataelement.h	/^class data_bytes : public data_element$/;"	c
+data_char	dataelement.h	/^typedef data_buildin<char> data_char;$/;"	t
+data_double	dataelement.h	/^typedef data_buildin<double> data_double;$/;"	t
+data_element	dataelement.h	/^class data_element$/;"	c
+data_float	dataelement.h	/^typedef data_buildin<float> data_float;$/;"	t
+data_int	dataelement.h	/^typedef data_buildin<int> data_int;$/;"	t
+data_long	dataelement.h	/^typedef data_buildin<long> data_long;$/;"	t
+data_mapping	datamapping.h	/^	data_mapping()$/;"	f	class:data_mapping
+data_mapping	datamapping.h	/^class data_mapping$/;"	c
+data_set	dataset.h	/^class data_set$/;"	c
+data_set	dataset.h	/^data_set<KEY_GAME_PLAYER>::data_set()$/;"	f	class:data_set
+data_short	dataelement.h	/^typedef data_buildin<short> data_short;$/;"	t
+data_uchar	dataelement.h	/^typedef data_buildin<unsigned char> data_uchar;$/;"	t
+data_uint	dataelement.h	/^typedef data_buildin<unsigned int> data_uint;$/;"	t
+data_ulong	dataelement.h	/^typedef data_buildin<unsigned long> data_ulong;$/;"	t
+data_ushort	dataelement.h	/^typedef data_buildin<unsigned short> data_ushort;$/;"	t
+del	sharememoryobjectmanager.h	/^	bool del(T* t)$/;"	f	class:share_memory_object_manager
+del	sharememoryobjectmanager.h	/^	bool del(unsigned int pool_id)$/;"	f	class:share_memory_object_manager
+delete_object	sharememoryclient.h	/^	void delete_object(int key, T* t)$/;"	f	class:share_memory_client
+delete_object	sharememorymessagequeue.h	/^		delete_object_t delete_object;$/;"	m	union:message::__anon1
+delete_object	sharememoryobjectmanager.h	/^	void delete_object(T* t)$/;"	f	class:share_memory_object_manager
+delete_object	sharememoryobjectpool.h	/^	void delete_object(T* o)$/;"	f	class:share_memory_object_pool
+delete_object_t	sharememorymessagequeue.h	/^	struct delete_object_t$/;"	s	struct:message
+do_delete_object	sharememoryclient.h	/^	void do_delete_object(int key, T* o)$/;"	f	class:share_memory_client
+do_new_object	sharememoryclient.h	/^	T* do_new_object(int key)$/;"	f	class:share_memory_client
+empty	fifo.h	/^bool fifo<T>::empty() const$/;"	f	class:fifo
+empty	sharememoryobjectpool.h	/^	bool empty() const$/;"	f	class:share_memory_object_pool
+exit	sharememoryserver.h	/^	void exit() { _loop = false; }$/;"	f	class:share_memory_server
+fifo	fifo.h	/^class fifo$/;"	c
+fifo	fifo.h	/^fifo<T>::fifo(const fifo& rhs)$/;"	f	class:fifo
+fifo	fifo.h	/^fifo<T>::fifo(unsigned int size)$/;"	f	class:fifo
+fifo	fifo.h	/^fifo<T>::fifo(unsigned int size, unsigned int size_max)$/;"	f	class:fifo
+for_each	sharememoryobjectmanager.h	/^	void for_each(FUNC func)$/;"	f	class:share_memory_object_manager
+full	fifo.h	/^bool fifo<T>::full() const$/;"	f	class:fifo
+game_player	client.cpp	/^	game_player()$/;"	f	class:game_player
+game_player	client.cpp	/^class game_player$/;"	c	file:
+get_message_queue	sharememorymessagequeue.cpp	/^unsigned int share_memory_message_queue::get_message_queue(std::vector<message>& v)$/;"	f	class:share_memory_message_queue
+get_pool_id	sharememoryclient.h	/^	unsigned int get_pool_id(int key, void* ptr)$/;"	f	class:share_memory_client
+get_pool_id	sharememoryobjectmanager.h	/^	unsigned int get_pool_id(void* t) const$/;"	f	class:share_memory_object_manager
+id	sharememoryobject.h	/^	int id;$/;"	m	struct:smo_player
+init	sharememory.cpp	/^bool share_memory::init(key_t key, size_t size)$/;"	f	class:share_memory
+init	sharememoryclient.cpp	/^bool share_memory_client::init()$/;"	f	class:share_memory_client
+init	sharememorymessagequeue.cpp	/^bool share_memory_message_queue::init()$/;"	f	class:share_memory_message_queue
+init	sharememorymessagequeue.h	/^	void init() { mutex.init(); n = 0; }$/;"	f	struct:message_queue_data_struct
+init	sharememorymutex.h	/^	void init()$/;"	f	class:share_memory_mutex
+init	sharememoryobject.h	/^	void init() { mutex.init(); }$/;"	f	struct:smo_player
+init	sharememoryobjectmanager.h	/^	bool init(key_t key, unsigned int capacity)$/;"	f	class:share_memory_object_manager
+init	sharememoryobjectpool.h	/^	bool init(key_t key, unsigned int capacity)$/;"	f	class:share_memory_object_pool
+init	sharememoryserver.cpp	/^bool share_memory_server::init()$/;"	f	class:share_memory_server
+key	sharememorymessagequeue.h	/^		int key;$/;"	m	struct:message::delete_object_t
+key	sharememorymessagequeue.h	/^		int key;$/;"	m	struct:message::new_object_t
+length	dataelement.h	/^	unsigned int length() { return sizeof(_data); }$/;"	f	class:data_buildin
+length	dataelement.h	/^	unsigned int length() { return sizeof(_data); }$/;"	f	class:data_bytes
+length	dataset.h	/^	unsigned int length() const$/;"	f	class:data_set
+length	fifo.h	/^	unsigned int length() const { return _in - _out; }$/;"	f	class:fifo
+level	sharememoryobject.h	/^	int level;$/;"	m	struct:smo_player
+lock	sharememorymessagequeue.h	/^	void lock() { mutex.lock(); }$/;"	f	struct:message_queue_data_struct
+lock	sharememorymutex.h	/^	void lock()$/;"	f	class:share_memory_mutex
+lock	sharememoryobject.h	/^	void lock() { mutex.lock(); }$/;"	f	struct:smo_player
+loop	client.cpp	/^bool loop = true;$/;"	v
+loop	sharememoryserver.cpp	/^bool share_memory_server::loop()$/;"	f	class:share_memory_server
+main	client.cpp	/^int main()$/;"	f
+main	server.cpp	/^int main()$/;"	f
+memory	sharememory.h	/^	void* memory() { return _memory; }$/;"	f	class:share_memory
+message	sharememorymessagequeue.h	/^	message() { memset(this, 0, sizeof(*this)); }$/;"	f	struct:message
+message	sharememorymessagequeue.h	/^struct message$/;"	s
+message_begin	sharememorymessagequeue.h	/^	message_begin = 1,$/;"	e	enum:message_type
+message_delete_object	sharememorymessagequeue.h	/^	message_delete_object,$/;"	e	enum:message_type
+message_end	sharememorymessagequeue.h	/^	message_end,$/;"	e	enum:message_type
+message_new_object	sharememorymessagequeue.h	/^	message_new_object = message_begin,$/;"	e	enum:message_type
+message_queue_data_struct	sharememorymessagequeue.h	/^struct message_queue_data_struct$/;"	s
+message_type	sharememorymessagequeue.h	/^enum message_type$/;"	g
+money	sharememoryobject.h	/^	long money;$/;"	m	struct:smo_player
+mutex	sharememorymessagequeue.h	/^	share_memory_mutex mutex;	$/;"	m	struct:message_queue_data_struct
+mutex	sharememoryobject.h	/^	share_memory_mutex mutex;$/;"	m	struct:smo_player
+n	sharememorymessagequeue.h	/^	unsigned int n;$/;"	m	struct:message_queue_data_struct
+new_object	sharememoryclient.h	/^	T* new_object(int key)$/;"	f	class:share_memory_client
+new_object	sharememorymessagequeue.h	/^		new_object_t new_object;$/;"	m	union:message::__anon1
+new_object	sharememoryobjectmanager.h	/^	T* new_object()$/;"	f	class:share_memory_object_manager
+new_object	sharememoryobjectpool.h	/^	T* new_object()$/;"	f	class:share_memory_object_pool
+new_object_t	sharememorymessagequeue.h	/^	struct new_object_t$/;"	s	struct:message
+obj_pool_id	sharememorymessagequeue.h	/^		int obj_pool_id;$/;"	m	struct:message::delete_object_t
+obj_pool_id	sharememorymessagequeue.h	/^		int obj_pool_id;$/;"	m	struct:message::new_object_t
+on_delete_object	sharememoryserver.cpp	/^bool share_memory_server::on_delete_object(message::delete_object_t* arg)$/;"	f	class:share_memory_server
+on_new_object	sharememoryserver.cpp	/^bool share_memory_server::on_new_object(message::new_object_t* arg)$/;"	f	class:share_memory_server
+operator =	fifo.h	/^fifo<T>& fifo<T>::operator= (const fifo& rhs)$/;"	f	class:fifo
+operator []	sharememoryobjectpool.h	/^	T& operator[](unsigned int index)$/;"	f	class:share_memory_object_pool
+playermap	client.cpp	/^std::map<int, game_player*> playermap;$/;"	v
+pop	fifo.h	/^T& fifo<T>::pop()$/;"	f	class:fifo
+push	fifo.h	/^void fifo<T>::push(const T& t)$/;"	f	class:fifo
+q	sharememorymessagequeue.h	/^	message q[1024];$/;"	m	struct:message_queue_data_struct
+reserve	fifo.h	/^void fifo<T>::reserve(unsigned int size) $/;"	f	class:fifo
+roundup_power_2	fifo.h	/^static void roundup_power_2(unsigned int& size)$/;"	f
+server	server.cpp	/^share_memory_server server;$/;"	v
+share_memmory_logic	sharememorylogic.cpp	/^void share_memmory_logic(struct smo_player* o)$/;"	f
+share_memory	sharememory.cpp	/^share_memory::share_memory()$/;"	f	class:share_memory
+share_memory	sharememory.h	/^class share_memory$/;"	c
+share_memory_client	sharememoryclient.h	/^	share_memory_client() {}$/;"	f	class:share_memory_client
+share_memory_client	sharememoryclient.h	/^class share_memory_client$/;"	c
+share_memory_environment	sharememoryenvironment.cpp	/^static share_memory_environment_type share_memory_environment = share_memory_environment_invalid;$/;"	v	file:
+share_memory_environment_client	sharememoryenvironment.h	/^	share_memory_environment_client,$/;"	e	enum:share_memory_environment_type
+share_memory_environment_invalid	sharememoryenvironment.h	/^	share_memory_environment_invalid,$/;"	e	enum:share_memory_environment_type
+share_memory_environment_is_client	sharememoryenvironment.cpp	/^bool share_memory_environment_is_client()$/;"	f
+share_memory_environment_is_server	sharememoryenvironment.cpp	/^bool share_memory_environment_is_server()$/;"	f
+share_memory_environment_server	sharememoryenvironment.h	/^	share_memory_environment_server,$/;"	e	enum:share_memory_environment_type
+share_memory_environment_type	sharememoryenvironment.h	/^enum share_memory_environment_type$/;"	g
+share_memory_init_environment	sharememoryenvironment.cpp	/^bool share_memory_init_environment(share_memory_environment_type type)$/;"	f
+share_memory_message_queue	sharememorymessagequeue.cpp	/^share_memory_message_queue::share_memory_message_queue()$/;"	f	class:share_memory_message_queue
+share_memory_message_queue	sharememorymessagequeue.h	/^class share_memory_message_queue$/;"	c
+share_memory_mutex	sharememorymutex.h	/^	share_memory_mutex() {}$/;"	f	class:share_memory_mutex
+share_memory_mutex	sharememorymutex.h	/^class share_memory_mutex$/;"	c
+share_memory_object_manager	sharememoryobjectmanager.h	/^	share_memory_object_manager() : _pool(nullptr) {}$/;"	f	class:share_memory_object_manager
+share_memory_object_manager	sharememoryobjectmanager.h	/^class share_memory_object_manager$/;"	c
+share_memory_object_pool	sharememoryobjectpool.h	/^	share_memory_object_pool() : _capacity(0), _freelist(nullptr) {}$/;"	f	class:share_memory_object_pool
+share_memory_object_pool	sharememoryobjectpool.h	/^class share_memory_object_pool$/;"	c
+share_memory_server	sharememoryserver.cpp	/^share_memory_server::share_memory_server()$/;"	f	class:share_memory_server
+share_memory_server	sharememoryserver.h	/^class share_memory_server$/;"	c
+smo_player	sharememoryobject.h	/^struct smo_player$/;"	s
+term	sharememory.cpp	/^bool share_memory::term()$/;"	f	class:share_memory
+term	sharememoryclient.cpp	/^bool share_memory_client::term()$/;"	f	class:share_memory_client
+term	sharememorymessagequeue.cpp	/^bool share_memory_message_queue::term()$/;"	f	class:share_memory_message_queue
+term	sharememorymessagequeue.h	/^	void term() { mutex.term(); }$/;"	f	struct:message_queue_data_struct
+term	sharememorymutex.h	/^	void term()$/;"	f	class:share_memory_mutex
+term	sharememoryobject.h	/^	void term() { mutex.term(); }$/;"	f	struct:smo_player
+term	sharememoryobjectmanager.h	/^	bool term()$/;"	f	class:share_memory_object_manager
+term	sharememoryobjectpool.h	/^	bool term()$/;"	f	class:share_memory_object_pool
+term	sharememoryserver.cpp	/^bool share_memory_server::term()$/;"	f	class:share_memory_server
+type	sharememorymessagequeue.h	/^	int type;$/;"	m	struct:message
+u	sharememorymessagequeue.h	/^	} u;$/;"	m	struct:message	typeref:union:message::__anon1
+unlock	sharememorymessagequeue.h	/^	void unlock() { mutex.unlock(); }$/;"	f	struct:message_queue_data_struct
+unlock	sharememorymutex.h	/^	void unlock()$/;"	f	class:share_memory_mutex
+unlock	sharememoryobject.h	/^	void unlock() { mutex.unlock(); }$/;"	f	struct:smo_player
+~data_element	dataelement.h	/^	virtual ~data_element() {}$/;"	f	class:data_element
+~data_set	dataset.h	/^	~data_set()$/;"	f	class:data_set
+~fifo	fifo.h	/^fifo<T>::~fifo()$/;"	f	class:fifo
+~game_player	client.cpp	/^	~game_player()$/;"	f	class:game_player
+~share_memory	sharememory.cpp	/^share_memory::~share_memory()$/;"	f	class:share_memory
+~share_memory_message_queue	sharememorymessagequeue.cpp	/^share_memory_message_queue::~share_memory_message_queue()$/;"	f	class:share_memory_message_queue
+~share_memory_mutex	sharememorymutex.h	/^	~share_memory_mutex() {}$/;"	f	class:share_memory_mutex
+~share_memory_object_manager	sharememoryobjectmanager.h	/^	~share_memory_object_manager() { assert(_pool == nullptr); }$/;"	f	class:share_memory_object_manager
+~share_memory_object_pool	sharememoryobjectpool.h	/^	~share_memory_object_pool() {}$/;"	f	class:share_memory_object_pool
+~share_memory_server	sharememoryserver.cpp	/^share_memory_server::~share_memory_server()$/;"	f	class:share_memory_server

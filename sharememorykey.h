@@ -1,0 +1,10 @@
+#pragma once
+
+enum SM_KEY
+{
+	SM_KEY_BEGIN = 1,
+	SM_KEY_MESSAGE_Q = SM_KEY_BEGIN,
+	SM_KEY_PLAYER,
+	SM_KEY_END,
+	SM_KEY_NUM = SM_KEY_END - SM_KEY_BEGIN,
+};
