@@ -1,26 +1,22 @@
 #include <iostream>
 #include <fstream>
 #include "sharememoryobject.h"
+#include "tablehumanoper.h"
 
 void share_memmory_logic(struct smo_player* o)
 {
+	bool dirty = false;
+	table_human tabledata;
 	o->lock();
-
-	std::ofstream f;
-	char id[16] = {};
-	sprintf(id, "%d", o->id);
-	f.open(id, std::ios_base::binary | std::ios_base::out | std::ios_base::trunc);
-	f.write((char*)&o->id, sizeof(o->id));
-	f.write((char*)&o->level, sizeof(o->level));
-	f.write((char*)&o->money, sizeof(o->money));
-	//f << o->id << o->level << o->money;
-	f.flush();
-	f.close();
-
-	o->unlock();
-	std::cout << "save player to file" 
-		<< ",id=" << o->id 
-		<< ",level=" << o->level
-	   	<< ",money" << o->money 
-		<< std::endl;
+	dirty = o->_dirty;
+	o->set_dirty(false);
+	if (dirty)
+		tabledata = o->_tabledata;
+	o->unlock(); 
+	
+	if (dirty)
+	{
+		table_human_oper oper;
+		oper.save(tabledata);	
+	}
 }

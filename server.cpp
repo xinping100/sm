@@ -1,9 +1,7 @@
 #include <iostream>
 #include <sstream>
 #include <thread>
-#include "sharememoryserver.h"
-
-share_memory_server server;
+#include "dbserver.h"
 
 void console()
 {
@@ -21,7 +19,7 @@ void console()
 
 		if (cmd == "exit")
 		{
-			server.exit();
+			dbserver::release();
 			std::cout << "bye bye" << std::endl;
 			break;
 		}
@@ -34,15 +32,15 @@ void console()
 
 int main()
 {
-	server.init();
+	dbserver* server = dbserver::instance();
+	server->init();
+	server->start();
 
 	std::thread t(console);
 	t.detach();
 
-	server.loop();
-
-	server.term();
-
+	server->term();
+	dbserver::release();
 	std::cout << "game over" << std::endl;
 	return 0;
 }

@@ -1,9 +1,10 @@
-OBJ_FILES = sharememory.o sharememorymessagequeue.o sharememorylogic.o sharememoryenvironment.o
+OBJ_FILES_S = sharememory.o sharememorymessagequeue.o sharememorylogic.o sharememoryenvironment.o tablehumanoper.o config.o dbsql.o sharememoryserver.o
+OBJ_FILES_C = sharememory.o sharememorymessagequeue.o sharememoryenvironment.o config.o 
 CXX = g++
 LD = g++
 
 CXXFLAGS = -c -std=c++11 -Wall -g -ggdb -O0 -pthread
-LDFLAGS = -pthread
+LDFLAGS = -pthread -lmysqlcppconn
 DEF =
 
 %.o : %.cpp
@@ -14,10 +15,10 @@ DEF =
 
 all : server client
 
-server : $(OBJ_FILES) server.o sharememoryserver.o
+server : $(OBJ_FILES_S) server.o dbserver.o
 	$(LD) $(LDFLAGS)  $^ -o $@
 
-client : $(OBJ_FILES) client.o sharememoryclient.o
+client : $(OBJ_FILES_C) client.o sharememoryclient.o 
 	$(LD) $(LDFLAGS)  $^ -o $@
 
 .PHONY : clean

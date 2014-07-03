@@ -13,8 +13,9 @@ public:
 	share_memory_object_manager& operator=(const share_memory_object_manager&) = delete;
 	~share_memory_object_manager() { assert(_pool == nullptr); }
 
-	bool init(key_t key, unsigned int capacity)
+	bool init(key_t key, unsigned int count)
 	{
+		unsigned int capacity = sizeof(T)*count;
 		_pool = new share_memory_object_pool<T>;
 		return _pool->init(key, capacity);
 	}
